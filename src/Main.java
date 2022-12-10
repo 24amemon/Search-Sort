@@ -64,6 +64,9 @@ public class Main extends PApplet {
             s = s + key;
         } if(key == RETURN || key == ENTER){
             t = Double.parseDouble(s);
+            blocks2.get(bottom).colorChange(2);
+            blocks2.get(top).colorChange(2);
+            printBlocks(blocks2);
             System.out.println("target is: " + t);
         } if(key == 'b'){
             binarySearch(t);
@@ -106,8 +109,6 @@ public class Main extends PApplet {
             Block b = new Block(xVal, 50, 30, tall, BlockState.DEFAULT);
             blocks2.add(i - 1, b);
         }
-        blocks2.get(bottom).colorChange(2);
-        blocks2.get(top).colorChange(2);
         printBlocks(blocks2);
     }
 
